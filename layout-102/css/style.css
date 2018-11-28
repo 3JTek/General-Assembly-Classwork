@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  overflow: auto;
+}
+
+main section {
+  float: left;
+  padding: 15px;
+}
+
+main section:first-child {
+  width: 65%;
+}
+
+main section:last-child {
+  width: 35%;
+}
+
+header, footer {
+  background-color: #eee;
+  padding: 15px;
+}
+
+header {
+  overflow: auto;
+}
+
+header h1 {
+  margin: 0;
+  float: left;
+}
+
+header nav {
+  padding: 10px 0;
+  float: right;
+}
+
+header nav a {
+  padding: 8px;
+}
+
+header nav a:hover {
+  background-color: #ddd;
+}
+
+footer p {
+  text-align: center;
+}
