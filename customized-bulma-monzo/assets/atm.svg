@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/ATM</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons/ATM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3">
+            <rect id="Rectangle-2" fill="#00A4DB" x="0" y="0" width="48" height="48" rx="6"></rect>
+            <path d="M36,14.25 C36,12.75 35.175,12 33.75,12 L14.25,12 C12.75,12 12,12.75 12,14.25 C12,15.75 12.75,16.5 14.25,16.5 L14.25,36 L33.75,36 L33.75,16.5 C35.25,16.5 36,15.825 36,14.25 L36,14.25 Z M30,32.25 L18,32.25 L18,14.25 L30,14.25 L30,32.25 L30,32.25 Z M15.75,14.25 L17.25,14.25 L17.25,33 L30.75,33 L30.75,14.25 L32.25,14.25 L32.25,34.5 L15.75,34.5 L15.75,14.25 Z M22.5056849,27.75 L22.5056849,25.5 L21.0048728,25.5 L21.0048728,24 L22.5056849,24 L22.5056849,20.25 L24.7569031,20.25 L27.0081213,20.25 L27.0081213,22.5 L26.2577152,22.5 L25.5073091,22.5 L25.5073091,21.75 L24.7569031,21.75 L24.006497,21.75 L24.006497,24 L26.2577152,24 L26.2577152,25.5 L24.006497,25.5 L24.006497,27.75 L27.0081213,27.75 L27.0081213,29.25 L21.0048728,29.25 L21.0048728,27.75 L22.5056849,27.75 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
