@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Mono);
+
+#timer, #watch {
+  background-color: #333;
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 30px auto;
+}
+
+#timer button, #watch button {
+  width: 30px;
+  height: 15px;
+  border: none;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+#watch button {
+  width: 15px;
+  height: 30px;
+  right: -13px;
+  top: 86px;
+}
+
+#watch button:active {
+  width: 5px;
+  right: -10px;
+}
+
+#timer button:active {
+  top: 9px;
+  height: 12px;
+}
+
+#startStop {
+  background-color: red;
+  transform: rotate(35deg);
+  right: 25px;
+}
+
+#startStop:active {
+  right: 27px;
+}
+
+#reset {
+  background-color: black;
+  transform: rotate(-35deg);
+  left: 25px;
+}
+
+#reset:active {
+  left: 27px;
+  cursor:pointer;
+}
+
+.screen {
+  width: 154px;
+  height: 42px;
+  background-color: #444;
+  background-image: linear-gradient(300deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
+  border-radius: 4px;
+  margin: auto;
+  position: relative;
+  top: 75px;
+  text-align: right;
+  font-family: 'PT Mono', monospace;
+  color: #fff;
+  line-height: 42px;
+  font-size: 32px;
+  padding: 5px 8px;
+}
+
+#timer .screen {
+  text-align: center;
+}
+
+#timer.ringing {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+
+  20%, 80% {
+    transform: translateX(2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
