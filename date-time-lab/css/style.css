@@ -37,22 +37,12 @@
 }
 
 #startStop {
-  background-color: red;
-  transform: rotate(35deg);
-  right: 25px;
-}
-
-#startStop:active {
-  right: 27px;
-}
-
-#reset {
   background-color: black;
   transform: rotate(-35deg);
   left: 25px;
 }
 
-#reset:active {
+#startStop:active {
   left: 27px;
   cursor:pointer;
 }
