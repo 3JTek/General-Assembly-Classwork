@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  flex-grow: 1;
+  max-width: 900px;
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container.screen {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container div {
+  width: calc(100% / 3)
+}
+
+.container div.mole {
+  background-image: url(https://www.rottler.com/images/eastern-mole.jpg);
+  background-size: cover;
+  background-position: center;
+}
