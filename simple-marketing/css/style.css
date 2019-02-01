@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+}
+div{
+  overflow: auto;
+}
+div:first-of-type{
+
+}
+header{
+  background: grey;
+}
+section{
+  background: blue;
+  border: 2px solid black;
+}
+div:first-of-type section{
+  width: 50%;
+  float: left;
+}
+div:last-of-type section{
+  width: 33.33%;
+  float: left;
+}
+footer{
+  background: grey;
+}

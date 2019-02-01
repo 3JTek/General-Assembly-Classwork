@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+div{
+  overflow: auto;
+}
+header{
+  background: grey;
+  overflow: auto;
+}
+h1{
+  float:left;
+}
+nav{
+  background: green;
+  float: right;
+  padding: 31px;
+}
+section{
+  background: blue;
+  border: 2px solid black;
+}
+div:last-of-type section{
+  width: 33.33%;
+  float: left;
+}
+footer{
+  background: grey;
+}

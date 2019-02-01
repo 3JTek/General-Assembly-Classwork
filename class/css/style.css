@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Karla', Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 50px;
+}
+
+main {
+  max-width: 900px;
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+textarea {
+  width: calc(50% - 10px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+}

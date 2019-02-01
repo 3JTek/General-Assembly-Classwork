@@ -1,0 +1,2 @@
+body{background:#ddd}section{background-color:green}section div{height:200px;background-color:blue;border-radius:5px solid;border-radius:5px}section div:nth-child(3){background-color:black}section div:hover{background-color:pink}
+/*# sourceMappingURL=style.css.map */

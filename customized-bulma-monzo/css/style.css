@@ -1,1 +1,34 @@
+.is-dark{
+  background-color: #14233c !important;
+}
 
+.hero{
+  background-image: url(../assets/hero.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  font-size: 28px;
+  background-size: 55%;
+}
+.hero .content{
+  max-width: 50%;
+}
+.navbar-menu{
+  display:flex;
+}
+.navbar-start{
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-brand img{
+  max-height: none;
+}
+a.is-secondary{
+  color: #00a0d6;
+  background-color: rgba(0,160,214,.1);
+}
+
+.column > figure{
+  margin: 0 50px;
+}

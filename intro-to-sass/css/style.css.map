@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,IAAI,CACF,UAAU,CCJO,IAAI,CDOvB,OAAO,CACL,gBAAgB,CAAE,KAAK,CACvB,WAAG,CACD,MAAM,CAAC,KAAK,CACZ,gBAAgB,CCVD,IAAI,CDWnB,aAAa,CAAE,SAAS,CACxB,aAAa,CAAE,GAAG,CAElB,wBAAc,CACZ,gBAAgB,CAAE,KAAK,CAEzB,iBAAO,CACL,gBAAgB,CAAE,IAAI",
+"sources": ["../scss/style.scss","../scss/_variables.scss"],
+"names": [],
+"file": "style.css"
+}

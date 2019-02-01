@@ -6,6 +6,12 @@ body {
   margin: 0;
 }
 
+.container {
+  max-width: 1200px;
+  overflow: auto;
+  margin: auto;
+}
+
 main {
   overflow: auto;
 }
@@ -13,14 +19,7 @@ main {
 main section {
   float: left;
   padding: 15px;
-}
-
-main section:first-child {
-  width: 65%;
-}
-
-main section:last-child {
-  width: 35%;
+  width: calc(100% / 3);
 }
 
 header, footer {
@@ -52,4 +51,20 @@ header nav a:hover {
 
 footer p {
   text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  main section {
+    width: 50%;
+  }
+  main section:nth-child(3) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main section {
+    float: none;
+    width: 100%;
+  }
 }

@@ -1,0 +1,23 @@
+@import 'variables  ';
+@import 'mixins';
+
+body{
+  background: $background-color
+}
+
+section{
+  background-color: green;
+  div{
+    height:200px;
+    background-color: $foreground-color;
+    border-radius: 5px solid;
+    border-radius: 5px;
+
+    &:nth-child(3){
+      background-color: black;
+    }
+    &:hover{
+      background-color: pink;
+    }
+  }
+}

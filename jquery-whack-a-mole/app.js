@@ -3,68 +3,69 @@ document.addEventListener('DOMContentLoaded', () => {
   let timerId
   let timeRemaining = 10
 
-  const screen = document.querySelector('.screen')
-  const screenHeader = screen.querySelector('h1')
-  const screenPara = screen.querySelector('p')
-  const playBtn = screen.querySelector('button')
-  const gameBoard = document.querySelector('.game')
-  const divs = gameBoard.querySelectorAll('.game div')
-  const scoreBoard = document.querySelector('.score')
-  const timer = document.querySelector('.timer')
+  const $screen = $('.screen')
+  const $screenHeader = $screen.find('h1')
+  const $screenPara = $screen.find('p')
+  const $playBtn = $screen.find('button')
+  const $gameBoard = $('.game')
+  const $divs = $gameBoard.find('div')
+  const $scoreBoard = $('.score')
+  const $timer = $('.timer')
 
-  gameBoard.style.display = 'none'
+  $gameBoard.hide()
 
   function updateScore() {
     score++
-    scoreBoard.textContent = score
+    $scoreBoard.text(score)
   }
 
   function updateTime() {
     timeRemaining--
-    timer.textContent = timeRemaining
+    $timer.text(timeRemaining)
   }
 
   function getRandomDiv() {
-    return divs[Math.floor(Math.random() * divs.length)]
+    return $divs.eq(Math.floor(Math.random() * $divs.length))
   }
 
   function goMole() {
     updateTime()
-    const div = getRandomDiv()
-    div.classList.add('mole')
-    setTimeout(() => div.classList.remove('mole'), 1000)
+    const $div = getRandomDiv()
+    $div.addClass('mole')
+    setTimeout(() => $div.removeClass('mole'), 1000)
     if(timeRemaining === 0) stop()
   }
 
   function stop() {
     clearTimeout(timerId)
-    screen.style.display = 'flex'
-    gameBoard.style.display = 'none'
+    $screen.css({display: 'flex'})
+    $gameBoard.hide()
 
-    screenHeader.textContent = 'Game over!'
-    screenPara.textContent = `You scored ${score}`
-    timer.textContent = timeRemaining
-    scoreBoard.textContent = score
+    $screenHeader.text('Game over!')
+    $screenPara.text(`You scored ${score}`)
+    $timer.text(timeRemaining)
+    $scoreBoard.text(score)
   }
 
   function play() {
     score = 0
     timeRemaining = 10
-    screen.style.display = 'none'
-    gameBoard.style.display = 'flex'
+
+    $screen.css({display: 'none'})
+    $gameBoard.css({display: 'flex'})
     timerId = setInterval(goMole, 1500)
     goMole()
   }
 
   function whack(e) {
-    if(e.target.classList.contains('mole')) {
+    if($(e.target).hasClass('mole')) {
       updateScore()
-      e.target.classList.remove('mole')
+      $(e.target).removeClass('mole')
     }
   }
 
-  playBtn.addEventListener('click', play)
+  $playBtn.on('click', play)
 
-  divs.forEach(div => div.addEventListener('click', whack))
+  $divs.each((i, element) => $(element).on('click', whack))
 
 })

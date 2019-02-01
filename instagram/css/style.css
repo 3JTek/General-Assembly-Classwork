@@ -4,6 +4,30 @@
 /*footer link color = #003569*/
 /*text grey color = #999*/
 
+*{
+  box-sizing: border-box;
+}
 body, input {
   font-family: 'Karla', sans-serif;
+}
+main{
+  display:flex;
+  justify-content: center;
+}
+section{
+  border: 2px black solid;
+  max-width: 375px;
+}
+footer{
+  display:flex;
+  justify-content: space-between;
+  border: 2px black solid;
+  max-width: 900px;
+  margin: auto;
+}
+footer>nav>a{
+  padding: 0 5px;
+}
+footer>p{
+  margin:0;
 }

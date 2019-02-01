@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+}
+section{
+  background-color: #ccc;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section div{
+  width: calc(100%/3);
+  height: calc(100%/3);
+  background-color: dodgerblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

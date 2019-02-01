@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+}
+#container{
+    margin: 300px auto 0 auto;
+     width: 300px;
+      height: 90px;
+      border: 2px solid grey;
+}
+#outer{
+  display:flex;
+  align-items: center;
+
+  width: 300px;
+  height: 30px;
+  border: 2px solid grey;
+  border-radius: 20px;
+}
+#inner{
+  display:inline-block;
+  width: 0;
+  height: 80%;
+  border-radius: 17px;
+  margin-left: 3px;
+  background-color: red;
+  transition: width 2s;
+}
+#increase5{
+  background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 15px;
+  width:100px;
+  height:50px;
+  margin:3px auto;
+}

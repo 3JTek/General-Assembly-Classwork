@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box;
+}
+header, footer{
+  background-color: #eee;
+  padding: 15px;
+  overflow: auto;
+}
+nav{
+  float: right;
+  padding: 8px;
+}
+body{
+  margin: 0;
+}
+main {
+  overflow:auto;
+}
+h1{
+  margin: 0;
+  float: left;
+}
+section{
+  width:50%;
+  float:left;
+  border: 2px solid black;
+}
+section:first-child{
+  width: 65%;
+}
+section:last-child{
+  width:35%;
+}
+footer{
+  text-align: center;
+}

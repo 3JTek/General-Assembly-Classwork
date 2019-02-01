@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  overflow: auto;
+}
+header{
+  background: grey;
+  overflow: auto;
+}
+h1{
+  float:left;
+  border: 2px solid black;
+}
+nav{
+  background: green;
+  float: right;
+  padding: 31px;
+}
+a{
+  border: 2px solid black;
+}
+section{
+  background: blue;
+  border: 2px solid black;
+}
+div[class="first-level"]:first-of-type{
+  float: left;
+  width: 20%;
+}
+div[class="first-level"]:last-of-type{
+  width: 80%;
+  float:right;
+}
+div[class="second-level"]:first-of-type{
+  width: 80%;
+  float:right;
+}
+
+
+
+footer{
+  background: grey;
+  border: 2px solid black;
+}
