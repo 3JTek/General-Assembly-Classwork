@@ -1,6 +1,6 @@
 const Track = require('../models/track')
 
-function indexRoute(req, res) {
+function indexRoute(req, res, next) {
   Track
     .find()
     .populate([
@@ -8,40 +8,42 @@ function indexRoute(req, res) {
       { path: 'album', select: 'title' }
     ])
     .then(tracks => res.json(tracks))
+    .catch(next)
 }
 
-
-function showRoute(req, res) {
+function showRoute(req, res, next) {
   Track
-  .findById(req.params.id)
-  .populate('artist album comments.user')
-  .then(track => res.json(track))
+    .findById(req.params.id)
+    .populate('artist album comments.user')
+    .then(track => res.json(track))
+    .catch(next)
 }
 
-function createRoute(req, res) {
+function createRoute(req, res, next) {
   Track
     .create(req.body)
     .then(track => res.status(201).json(track))
-    .catch(err => res.status(422).json(err.errors))
+    .catch(next)
 }
 
-function updateRoute(req, res) {
+function updateRoute(req, res, next) {
   Track
     .findById(req.params.id)
     .then(track => track.set(req.body))
     .then(track => track.save())
     .then(track => res.json(track))
-    .catch(err => res.status(422).json(err.errors))
+    .catch(next)
 }
 
-function deleteRoute(req, res) {
+function deleteRoute(req, res, next) {
   Track
     .findById(req.params.id)
     .then(track => track.remove())
     .then(() => res.sendStatus(204))
+    .catch(next)
 }
 
-function commentCreateRoute(req, res) {
+function commentCreateRoute(req, res, next) {
   req.body.user = req.currentUser
   Track
     .findById(req.params.id)
@@ -50,10 +52,10 @@ function commentCreateRoute(req, res) {
       return track.save()
     })
     .then(track => res.status(201).json(track))
-    .catch(err => res.status(422).json(err.errors))
+    .catch(next)
 }
 
-function commentDeleteRoute(req, res) {
+function commentDeleteRoute(req, res, next) {
   Track
     .findById(req.params.id)
     .then(track => {
@@ -61,6 +63,7 @@ function commentDeleteRoute(req, res) {
       return comment.remove()
     })
     .then(track => res.json(track))
+    .catch(next)
 }
 
 module.exports = {

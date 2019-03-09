@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 const Promise = require('bluebird')
 
@@ -30,8 +31,8 @@ mongoose.connect(process.env.MONGODB_URI, (err, db) => {
         album: data.album,
         artist: data.artist
       })
-  })
-  .then(() => console.log('Database successfully seeded'))
-  .catch(err => console.log(err))
-  .finally(() => mongoose.connection.close())
+    })
+    .then(() => console.log('Database successfully seeded'))
+    .catch(err => console.log(err))
+    .finally(() => mongoose.connection.close())
 })

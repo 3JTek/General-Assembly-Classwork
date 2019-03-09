@@ -19,7 +19,7 @@ function getNextIndex() {
 }
 
 function endGame() {
-  console.log('stops');
+  console.log('stops')
   clearInterval(moveTimerId)
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ArtistsForm = ({ data, handleChange, handleSubmit }) => {
+const TrackForm = ({ artists, albums, data, handleChange, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -9,9 +9,9 @@ const ArtistsForm = ({ data, handleChange, handleSubmit }) => {
           <input
             className="input"
             placeholder="Title"
-            name="name"
+            name="title"
             onChange={handleChange}
-            value={data.name || ''}
+            value={data.title || ''}
           />
         </div>
       </div>
@@ -31,7 +31,11 @@ const ArtistsForm = ({ data, handleChange, handleSubmit }) => {
         <label className="label">Artist</label>
         <div className="control">
           <div className="select is-fullwidth">
-            <select name="artist">
+            <select name="artist" onChange={handleChange}>
+              <option selected={true} disabled value="">Choose Tagging</option>
+              {artists.map(artist =>
+                <option key={artist._id} value={artist._id}>{artist.name}</option>
+              )}
             </select>
           </div>
         </div>
@@ -40,7 +44,11 @@ const ArtistsForm = ({ data, handleChange, handleSubmit }) => {
         <label className="label">Album</label>
         <div className="control">
           <div className="select is-fullwidth">
-            <select name="album">
+            <select name="album" onChange={handleChange}>
+              <option selected={true} disabled value="">Choose Tagging</option>
+              {albums.map(album =>
+                <option key={album._id} value={album._id}>{album.title}</option>
+              )}
             </select>
           </div>
         </div>
@@ -63,4 +71,4 @@ const ArtistsForm = ({ data, handleChange, handleSubmit }) => {
   )
 }
 
-export default ArtistsForm
+export default TrackForm
